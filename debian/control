@@ -1,0 +1,27 @@
+Source: node-emoji
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Paolo Greppi <paolo.greppi@libpf.com>
+Section: javascript
+Testsuite: autopkgtest-pkg-nodejs
+Priority: optional
+Build-Depends: debhelper-compat (= 12)
+ , mocha <!nocheck>
+ , node-lodash-packages <!nocheck>
+ , node-should <!nocheck>
+ , pkg-js-tools (>= 0.9.35~)
+Standards-Version: 4.5.0
+Vcs-Browser: https://salsa.debian.org/js-team/node-emoji
+Vcs-Git: https://salsa.debian.org/js-team/node-emoji.git
+Homepage: https://github.com/omnidan/node-emoji
+Rules-Requires-Root: no
+
+Package: node-emoji
+Architecture: all
+Depends: ${misc:Depends}
+ , node-lodash-packages
+ , nodejs
+Description: simple emoji support for node.js
+ Node.js module to encode and decode emoji ideograms and smileys
+ from their aliases or colon-sequences.
+ .
+ Node.js is an event-based server-side JavaScript engine.
